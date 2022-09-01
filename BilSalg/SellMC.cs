@@ -46,6 +46,7 @@
         public static void ShowSale(MC m)
         {
             Console.Clear();
+            Console.WriteLine("Search results\n");
             Console.WriteLine($"\nMaker: {m.Maker} \nModel: {m.Model} \nModel Year: {m.Year} \nKM Driven: {m.KM} \nPrice: {m.Price}kr \nDiscription: {m.Discription}");
             Console.ReadKey();
         }
