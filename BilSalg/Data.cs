@@ -3,16 +3,8 @@
     public class Data
     {
         #region Lists
-        public List<SellCar> CarsList { get; set; } = new();
-        public List<SellMC> McList { get; set; } = new();
-        #endregion
-        #region GetSets
-        public string? Maker { get; set; }
-        public string? Model { get; set; }
-        public string? Discription { get; set; }
-        public int Year { get; set; }
-        public int KM { get; set; }
-        public int Price { get; set; }
+        public List<Cars> CarsList { get; set; } = new();
+        public List<MC> McList { get; set; } = new();
         #endregion
         #region SaveData
         public static Data data = new Data();

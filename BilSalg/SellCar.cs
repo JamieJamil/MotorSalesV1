@@ -23,7 +23,7 @@
         }
         public static void SellMenu()
         {
-            SellCar car = new SellCar();
+            Cars car = new Cars();
             Console.Clear();
             car.Maker = GetString("CARSALE\n\nMaker: ");
             car.Model = GetString("Model: ");
@@ -36,13 +36,15 @@
 
 
             ShowSale(car);
-            Console.WriteLine("Confirm adding to list (Y/N)");
+            Console.WriteLine("\nConfirm adding to list (Y/N)");
             if (Console.ReadKey(true).Key == ConsoleKey.Y) data.CarsList.Add(car);
         }
-        public static void ShowSale(SellCar s)
+        public static void ShowSale(Cars s)
         {
-            Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM}kr \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
-
+            Console.Clear();
+            Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM} \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
+            Console.WriteLine("Car details, press ANY button to keep going");
+            Console.ReadKey();
         }
         public static string GetString(string type)
         {
@@ -68,8 +70,8 @@
         public static void SearchCar()
         {
             Console.Write("Search: ");
-            string? search = Console.ReadLine();
-            foreach (SellCar car in data.CarsList)
+            string? search = Console.ReadLine().ToLower();
+            foreach (Cars car in data.CarsList)
             {
                 if (search != null)
                 {
