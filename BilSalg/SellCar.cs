@@ -43,7 +43,6 @@
         {
             Console.Clear();
             Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM} \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
-            Console.WriteLine("Car details, press ANY button to keep going");
             Console.ReadKey();
         }
         public static string GetString(string type)
