@@ -35,9 +35,14 @@
             //TODO Diesel/Benz - KM - GEAR
 
 
-            ShowSale(car);
+            ConfirmSale(car);
             Console.WriteLine("\nConfirm adding to list (Y/N)");
             if (Console.ReadKey(true).Key == ConsoleKey.Y) data.CarsList.Add(car);
+        }
+        public static void ConfirmSale(Cars s)
+        {
+            Console.Clear();
+            Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM} \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
         }
         public static void ShowSale(Cars s)
         {

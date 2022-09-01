@@ -33,10 +33,15 @@
             mc.Discription = GetString("Discription: ");
 
 
-            ShowSale(mc);
+            ConfirmSale(mc);
             Console.WriteLine("\nConfirm adding to list (Y/N)");
             if (Console.ReadKey(true).Key == ConsoleKey.Y) data.McList.Add(mc);
 
+        }
+        public static void ConfirmSale(MC m)
+        {
+            Console.Clear();
+            Console.WriteLine($"\nMaker: {m.Maker} \nModel: {m.Model} \nModel Year: {m.Year} \nKM Driven: {m.KM} \nPrice: {m.Price}kr \nDiscription: {m.Discription}");
         }
         public static void ShowSale(MC m)
         {
