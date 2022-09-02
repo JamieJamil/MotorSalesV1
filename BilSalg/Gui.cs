@@ -16,15 +16,17 @@ namespace BilSalg
             Console.Clear();
             Console.WriteLine("Welcome to MotorSales\n\n[1] For Cars\n[2] For MotorCycles\n[3] Save Data\n[4] Load Data");
 
+            SellCar sellCar = new SellCar();
+            SellMC sellMC = new SellMC();
             switch (Console.ReadKey(true).Key)
             {
                 case ConsoleKey.NumPad1:
                 case ConsoleKey.D1:
-                    SellCar.CarMenu();
+                    sellCar.CarMenu();
                     break;
                 case ConsoleKey.NumPad2:
                 case ConsoleKey.D2:
-                    SellMC.McMenu();
+                    sellMC.McMenu();
                     break;
                 case ConsoleKey.NumPad3:
                 case ConsoleKey.D3:

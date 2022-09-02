@@ -2,7 +2,7 @@
 {
     public class SellCar : Data
     {
-        public static void CarMenu()
+        public void CarMenu()
         {
             Console.Clear();
             Console.WriteLine("\nCar Menu\n[1] To Put Car For Sale\n[2] To Look up Listed Cars");
@@ -21,7 +21,7 @@
                     break;
             }
         }
-        public static void SellMenu()
+        public void SellMenu()
         {
             Cars car = new Cars();
             Console.Clear();
@@ -32,26 +32,23 @@
             car.Price = GetInt("\nPrice example(150000)(Currency: DKK)\nPrice: ");
             car.Discription = GetString("Discription: ");
 
-            //TODO Diesel/Benz - KM - GEAR
-
-
             ConfirmSale(car);
             Console.WriteLine("\nConfirm adding to list (Y/N)");
             if (Console.ReadKey(true).Key == ConsoleKey.Y) data.CarsList.Add(car);
         }
-        public static void ConfirmSale(Cars s)
+        public void ConfirmSale(Cars s)
         {
             Console.Clear();
             Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM} \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
         }
-        public static void ShowSale(Cars s)
+        public void ShowSale(Cars s)
         {
             Console.Clear();
-            Console.WriteLine("Search results\n");
+            Console.WriteLine("\nSearch results");
             Console.WriteLine($"\nMaker: {s.Maker} \nModel: {s.Model} \nModel Year: {s.Year} \nKM Driven: {s.KM} \nPrice: {s.Price}kr \nDiscription: {s.Discription}");
             Console.ReadKey();
         }
-        public static string GetString(string type)
+        public string GetString(string type)
         {
             string? input;
             do
@@ -62,7 +59,7 @@
             while (input == null || input == "");
             return input;
         }
-        public static int GetInt(string request)
+        public int GetInt(string request)
         {
             int i;
             do
@@ -72,7 +69,7 @@
             while (!int.TryParse(Console.ReadLine(), out i));
             return i;
         }
-        public static void SearchCar()
+        public void SearchCar()
         {
             Console.Write("Search: ");
             string? search = Console.ReadLine().ToLower();

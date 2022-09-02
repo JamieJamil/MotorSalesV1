@@ -9,7 +9,7 @@
         #region SaveData
         public static Data data = new Data();
 
-        public static void SaveData()
+        public void SaveData()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string json = System.Text.Json.JsonSerializer.Serialize(data);
@@ -19,7 +19,7 @@
             Console.ReadKey();
         }
 
-        public static void LoadData()
+        public void LoadData()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string json = File.ReadAllText(path + @"/CarSaleData.json");

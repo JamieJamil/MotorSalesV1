@@ -12,9 +12,11 @@ namespace BilSalg
         public string? Maker { get; set; }
         public string? Model { get; set; }
         public string? Discription { get; set; }
+        public string? Fuel { get; set; }
         public int Year { get; set; }
         public int KM { get; set; }
         public int Price { get; set; }
+        public int CC { get; set; }
         #endregion
     }
 }
